@@ -1,119 +1,67 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-/* Header */
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
-}
-
-header ul {
-    list-style: none;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    display: flex;
+    background-color: #f4f4f4;
 }
 
-header ul li {
-    margin-left: 15px;
-}
-
-header ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero .btn {
-    text-decoration: none;
-    background: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.hero .btn:hover {
-    background: #0056b3;
-}
-
-/* Sections */
-section {
+/* Calculator Container */
+.calculator {
+    background: #fff;
     padding: 20px;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
 }
 
-.feature-box {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.feature {
-    width: 30%;
-    background: #f4f4f4;
+/* Display Screen */
+#display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: right;
     padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-.pricing-box {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-.plan {
-    width: 30%;
-    background: #f9f9f9;
-    padding: 20px;
+/* Buttons */
+button {
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
     border-radius: 5px;
-    text-align: center;
-}
-
-.plan .btn {
-    text-decoration: none;
-    background: #007BFF;
+    cursor: pointer;
+    background-color: #007BFF;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
 }
 
-.plan .btn:hover {
-    background: #0056b3;
+button.operator {
+    background-color: #FFA500;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Clear Button */
+button:nth-child(13) {
+    background-color: #FF6347;
 }
